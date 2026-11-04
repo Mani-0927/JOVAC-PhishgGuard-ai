@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased dark:bg-cyber-950 dark:text-slate-100;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-cyan-500 ring-offset-2 ring-offset-white dark:ring-offset-cyber-950;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-cyber-700 dark:bg-cyber-900/80 dark:shadow-glow;
+  }
+  .input {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-500
+      focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/40
+      dark:border-cyber-700 dark:bg-cyber-800 dark:text-slate-100 dark:placeholder:text-slate-400;
+  }
+  .label {
+    @apply mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply btn bg-cyan-600 text-white hover:bg-cyan-700 dark:bg-cyan-500 dark:text-cyber-950 dark:hover:bg-cyan-400;
+  }
+  .btn-ghost {
+    @apply btn border border-slate-300 text-slate-700 hover:bg-slate-100 dark:border-cyber-700 dark:text-slate-200 dark:hover:bg-cyber-800;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-medium;
+  }
+}
